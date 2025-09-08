@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1, h3 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            width: 150px;
+        }
+
+        #result, #Greetings, #moodText {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff4500;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            width: 350px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Greeting Section -->
+    <div class="section">
+        <h1>Greeting</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button onclick="handleGreeting()">Say Hello</button>
+        <p id="Greetings"></p>
+    </div>
+
+    <!-- Mood Tracker Section -->
+    <div class="section">
+        <h1>Mood Tracker</h1>
+        <button id="moodBtn" onclick="handleMood()">Mood Tracker</button>
+        <p id="moodText"></p>
+    </div>
+
+    <!-- Energy Booster Section -->
+    <div class="section">
+        <h3>Energy Booster</h3>
+        <input type="text" id="energyLevel" placeholder="Enter energy level">
+        <button id="energyBtn" onclick="handleBooster()">Boost</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="./test.js"></script>
+</body>
+</html>
